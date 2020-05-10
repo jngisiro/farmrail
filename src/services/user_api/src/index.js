@@ -1,12 +1,11 @@
-const app = require('./app');
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
+import app from './app';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 
-const config = require('./config');
+import config from './config';
 
 dotenv.config();
 
-// connect to db
 mongoose
   .connect(config.databaseUrl[config.environment], {
     useNewUrlParser: true,

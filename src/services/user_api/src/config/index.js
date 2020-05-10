@@ -1,8 +1,8 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-module.exports = {
+export default {
   url: process.env.APP_URL || 'http://localhost:3000',
   port: process.env.PORT || 3000,
   environment: process.env.NODE_ENV || 'development',

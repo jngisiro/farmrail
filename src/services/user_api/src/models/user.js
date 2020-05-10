@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
-const crypto = require('crypto');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import crypto from 'crypto';
 
-const Email = require('../utils/Email');
-const config = require('../config');
+import Email from '../utils/Email';
+import config from '../config';
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -78,4 +78,4 @@ userSchema.methods.sendForgotPasswordEmail = async function (token) {
     .send();
 };
 
-module.exports = mongoose.model('User', userSchema);
+export default mongoose.model('User', userSchema);

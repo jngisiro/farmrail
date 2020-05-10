@@ -1,9 +1,9 @@
-const User = require('../../models/user');
+const User = require('../../src/models/user');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 
-const config = require('../../config');
+const config = require('../../src/config');
 
 const user = {
   name: 'New User',
