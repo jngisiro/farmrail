@@ -4,14 +4,16 @@
   "description": "Api that allows users to login, create acc, delete account,authenticate account",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node dist/server",
     "start:dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src/ --out-dir dist/ --copy-files",
     "test": "jest",
     "lint": "eslint src/"
   },
   "author": "farmrail",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.9.6",
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
@@ -50,5 +52,8 @@
     "jest": "^26.0.1",
     "mocha": "^7.1.2",
     "nodemon": "^2.0.3"
+  },
+  "engines": {
+    "node": "10.16.0"
   }
 }
