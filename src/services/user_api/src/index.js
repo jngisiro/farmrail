@@ -1,10 +1,8 @@
 import app from './app';
-import dotenv from 'dotenv';
+
 import mongoose from 'mongoose';
 
 import config from './config';
-
-dotenv.config();
 
 mongoose
   .connect(config.databaseUrl[config.environment], {
@@ -15,4 +13,4 @@ mongoose
   })
   .then(() => console.log('connected to db'));
 
-app.listen(3000, () => console.log(`server is Up and running on port:${config.port}`));
+app.listen(config.port, () => console.log(`server is Up and running on port:${config.port}`));
